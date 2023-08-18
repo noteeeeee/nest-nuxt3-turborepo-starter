@@ -1,0 +1,22 @@
+{
+  "name": "@app/client",
+  "private": true,
+  "scripts": {
+    "build": "nuxt generate --no-clear",
+    "dev": "nuxt dev --no-clear",
+    "generate": "nuxt generate --no-clear",
+    "start": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@app/config": "workspace:*",
+    "@nuxt/devtools": "latest",
+    "@nuxtjs/tailwindcss": "^6.8.0",
+    "@types/node": "^18.17.3",
+    "nuxt": "^3.6.5",
+    "sass": "^1.66.0"
+  },
+  "dependencies": {
+    "flowbite": "^1.8.1"
+  }
+}

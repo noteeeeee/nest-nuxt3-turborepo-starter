@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "start": "turbo run start",
+    "dev": "cross-env NODE_ENV=development turbo run dev",
+    "sync": "pnpm --filter @app/server sync",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "@turbo/gen": "^1.9.7",
+    "prettier": "^2.5.1",
+    "turbo": "latest"
+  },
+  "packageManager": "pnpm@8.6.10",
+  "name": "@app/root"
+}

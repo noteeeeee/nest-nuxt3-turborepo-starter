@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  db:
+    image: "mariadb:10.3"
+    volumes:
+      - ./.docker/./db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DATABASE_PASSWORD}"
+      MYSQL_DATABASE: ${DATABASE_NAME}"
+      MYSQL_USER: ${DATABASE_USER}"
+      MYSQL_PASSWORD: ${DATABASE_PASSWORD}"
+  app:
+    build:
+      context: .
+      dockerfile: ./.docker/Dockerfile
+    command: bash -c "if [ ! -f /ran_migrations.txt ]; then yarn sync && touch /ran_migrations.txt; fi; yarn start"
+    ports:
+      - "3000:3000"
+      - "3001:3001"
+    volumes:
+      - "./.env:/app/.env"
+    depends_on:
+      - db
+    links:
+      - db

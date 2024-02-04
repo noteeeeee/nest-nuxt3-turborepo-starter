@@ -1,7 +1,5 @@
 import { DataSource } from 'typeorm';
-import { EnvConfig } from '../../../packages/config';
-
-// Entities
+import { EnvConfig } from '@app/config';
 
 export default new DataSource({
   type: EnvConfig.DATABASE_TYPE as any,
@@ -15,4 +13,12 @@ export default new DataSource({
   extra: {
     charset: 'utf8mb4_unicode_ci',
   },
+  // cache: {
+  //   type: "ioredis",
+  //   options: {
+  //     host: EnvConfig.REDIS_HOST,
+  //     port: EnvConfig.REDIS_PORT,
+  //     password: EnvConfig.REDIS_PASSWORD
+  //   }
+  // }
 });

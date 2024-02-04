@@ -14,9 +14,17 @@
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@types/node": "^18.17.3",
     "nuxt": "^3.6.5",
-    "sass": "^1.66.0"
+    "sass": "^1.66.0",
+    "shadcn-nuxt": "^0.8.7"
   },
   "dependencies": {
-    "flowbite": "^1.8.1"
+    "axios": "^1.6.7",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "lucide-vue-next": "^0.321.0",
+    "nprogress": "^0.2.0",
+    "radix-vue": "^1.4.0",
+    "tailwind-merge": "^2.2.1",
+    "tailwindcss-animate": "^1.0.7"
   }
 }
